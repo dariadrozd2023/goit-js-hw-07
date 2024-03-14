@@ -20,4 +20,4 @@ input.style.fontFamily = 'Oxygen';
 input.style.paddingLeft = '16px';
 input.style.fontSize = '16px';
 
-console.log(span.style);
+
