@@ -30,9 +30,12 @@ const galleryList = document.querySelector('.gallery');
 images.forEach((image) => {
   const listItem = document.createElement('li');
 
+  listItem.style.margin = 'auto';
+
   const imageHTML = `<img src="${image.url}" alt="${image.alt}">`;
 
   listItem.innerHTML = imageHTML;
 
   galleryList.append(listItem);
 });
+galleryList.style.minWidth = '1128px';
