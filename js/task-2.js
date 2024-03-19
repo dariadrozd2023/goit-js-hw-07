@@ -27,15 +27,11 @@ const images = [
 
 const galleryList = document.querySelector('.gallery');
 
-images.forEach((image) => {
-  const listItem = document.createElement('li');
+const galleryItemsHTML = images.map(image => {
+  return `<li><img src="${image.url}" alt="${image.alt}"></li>`;
+}).join('');
 
-  listItem.style.margin = 'auto';
+galleryList.innerHTML = galleryItemsHTML;
 
-  const imageHTML = `<img src="${image.url}" alt="${image.alt}">`;
-
-  listItem.innerHTML = imageHTML;
-
-  galleryList.append(listItem);
-});
-galleryList.style.minWidth = '1128px';
+//  listItem.style.margin = 'auto';
+// galleryList.style.minWidth = '1128px';
